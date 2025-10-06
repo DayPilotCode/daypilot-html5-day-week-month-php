@@ -256,10 +256,10 @@
       const {data: result} = await DayPilot.Http.post("calendar_create.php", modal.result);
 
       active.events.add({
-        start: data.start,
-        end: data.end,
+        start: modal.result.start,
+        end: modal.result.end,
         id: result.id,
-        text: data.text
+        text: modal.result.text
       });
 
     };
